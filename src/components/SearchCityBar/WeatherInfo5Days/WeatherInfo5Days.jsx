@@ -15,16 +15,13 @@ function WeatherInfo5Days({ city5Data }) {
   console.log("5 days", next5days);
 
   return (
-    <div className=" p-10 bg-white  space-y-6 rounded-md opacity-80">
+    <div className=" p-10 bg-white flex flex-col space-y-6 rounded-md opacity-80">
       <h1 className=" text-3xl font-sans font-bold text-slate-800 text-center ">
         Previsões para os próximos 5 dias
       </h1>
-      <div className="flex justify-envely space-x-8 overflow-x-auto">
+      <div className=" flex flex-wrap gap-5 justify-evenly">
         {next5days.map((item, index) => (
-          <div
-            className="py-3 bg-slate-200 shadow-md flex rounded-md"
-            key={index}
-          >
+          <div className="py-3 bg-slate-200 shadow-md rounded-md" key={index}>
             <DayWeather item={item} />
           </div>
         ))}
